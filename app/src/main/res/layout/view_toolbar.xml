@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="toolBarTitle"
+            type="String" />
+
+        <variable
+            name="isTitleVisible"
+            type="Boolean" />
+
+        <variable
+            name="isTitleInCenter"
+            type="Boolean" />
+
+        <variable
+            name="isBackArrowVisible"
+            type="Boolean" />
+
+        <import type="android.view.View" />
+
+        <import type="android.graphics.drawable.Drawable" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:paddingBottom="@dimen/size10">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size15"
+
+            android:layout_marginTop="@dimen/size10"
+
+            android:src="@drawable/ic_back_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whattowhere.ui.customView.CustomTextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/tvTitle"
+            android:layout_marginStart="@dimen/size15"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_25sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivBack"
+            android:paddingEnd="@dimen/size30"
+            app:layout_constraintTop_toTopOf="@id/ivBack"
+            app:textStyle="dalime"
+            tools:text="Edit Profile" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

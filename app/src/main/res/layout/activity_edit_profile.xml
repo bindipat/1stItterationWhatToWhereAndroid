@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.whattowhere.ui.profile.EditProfileViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.profile.EditProfileActivity">
+
+        <com.whattowhere.ui.customView.CustomToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isBackArrowVisible="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/lbl_edit_profile"
+            tools:visibility="visible" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_user_profile_placeholder"
+                    app:shapeAppearanceOverlay="@style/ShapeStyle50Percent" />
+
+                <com.whattowhere.ui.customView.CustomTextView
+                    android:id="@+id/btnChangeProfilePicture"
+                    style="@style/button"
+                    rectColor="@{@color/black}"
+                    rectDrawable="@{125f}"
+                    app:textStyle="dm_normal"
+                    android:textSize="@dimen/text_size_15sp"
+                    android:layout_width="wrap_content"
+                    android:text="@string/lbl_change_profile_picture"
+                    tools:background="@color/black" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabEditProfile"
+                    style="@style/tabStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size30"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <com.google.android.material.tabs.TabItem
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_profile_info" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_change_password" />
+
+                </com.google.android.material.tabs.TabLayout>
+
+                <LinearLayout
+                    android:id="@+id/llEditProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/size25"
+                    android:paddingTop="@dimen/size20"
+                    android:paddingEnd="@dimen/size25"
+                    android:visibility="visible">
+
+                    <com.whattowhere.ui.customView.CustomTextInputLayout
+                        android:id="@+id/tilUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size50"
+                        android:padding="@dimen/size1"
+                        app:boxBackgroundColor="@color/grey_hint"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="@dimen/size0"
+                        app:startIconDrawable="@drawable/ic_username_icon"
+                        app:startIconTint="@color/black">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtUserName"
+                            style="@style/editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/lbl_enter_user_name"
+                            android:inputType="textCapWords"
+                            app:textStyle="dm_normal" />
+                    </com.whattowhere.ui.customView.CustomTextInputLayout>
+
+
+                    <com.whattowhere.ui.customView.CustomTextInputLayout
+                        android:id="@+id/tilDescriptionBio"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size100"
+                        android:layout_marginTop="@dimen/size20"
+                        app:boxBackgroundColor="@color/grey_hint"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="@dimen/size0">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtDescriptionBio"
+                            style="@style/editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="start"
+                            android:hint="@string/lbl_description_bio"
+                            android:inputType="textMultiLine"
+                            android:padding="@dimen/size15"
+
+                            android:textColorHint="@color/black"
+                            app:textStyle="dm_normal" />
+                    </com.whattowhere.ui.customView.CustomTextInputLayout>
+
+
+                    <com.whattowhere.ui.customView.CustomTextInputLayout
+                        android:id="@+id/tilEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size50"
+                        android:layout_marginTop="@dimen/size20"
+                        app:boxBackgroundColor="@color/grey_hint"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="@dimen/size0"
+                        app:startIconDrawable="@drawable/ic_email_icon"
+                        app:startIconTint="@color/black">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtEmail"
+                            style="@style/editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/enter_email_address"
+                            android:inputType="textEmailAddress"
+                            app:textStyle="dm_normal" />
+                    </com.whattowhere.ui.customView.CustomTextInputLayout>
+
+
+                    <com.whattowhere.ui.customView.CustomTextInputLayout
+                        android:id="@+id/tilPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size50"
+                        android:layout_marginTop="@dimen/size20"
+                        app:boxBackgroundColor="@color/grey_hint"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="@dimen/size0"
+                        app:startIconDrawable="@drawable/ic_phone_icon"
+                        app:startIconTint="@color/black">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtPhone"
+                            style="@style/editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/lbl_enter_phone_number"
+                            android:inputType="numberDecimal"
+                            app:textStyle="dm_normal" />
+                    </com.whattowhere.ui.customView.CustomTextInputLayout>
+
+                    <com.whattowhere.ui.customView.CustomTextInputLayout
+                        android:id="@+id/tilSelectGender"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size50"
+                        android:layout_marginTop="@dimen/size20"
+                        app:boxBackgroundColor="@color/grey_hint"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="@dimen/size0"
+                        app:startIconDrawable="@drawable/ic_gender_icon"
+                        app:startIconTint="@color/black">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/acGenders"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:entries="@array/genders"
+                            android:focusable="false"
+                            android:hint="@string/lbl_select_gender"
+                            app:textStyle="dm_normal" />
+                    </com.whattowhere.ui.customView.CustomTextInputLayout>
+
+
+                    <com.whattowhere.ui.customView.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size20"
+                        android:text="@string/lbl_choose_your_pronouns" />
+
+                    <LinearLayout
+                        borderRectDrawable="@{15f}"
+                        strokeColor="@{@color/black}"
+                        strokeWidth="@{2}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size10">
+
+                        <com.whattowhere.ui.customView.CustomTextView
+                            android:id="@+id/tvShe"
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/size10"
+                            android:paddingBottom="@dimen/size10"
+                            android:text="@string/lbl_she"
+                            android:textSize="@dimen/text_size_16"
+                            app:textStyle="dm_normal" />
+
+                        <View
+                            android:layout_width="@dimen/size1"
+                            android:layout_height="match_parent"
+                            android:background="@color/black" />
+
+                        <com.whattowhere.ui.customView.CustomTextView
+                            android:id="@+id/tvHe"
+                            rectColor="@{@color/black}"
+                            rectDrawable="@{0f}"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/size10"
+                            android:paddingBottom="@dimen/size10"
+                            android:text="@string/lbl_he"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_16"
+                            app:textStyle="dm_normal" />
+
+                        <View
+                            android:layout_width="@dimen/size1"
+                            android:layout_height="match_parent"
+                            android:background="@color/black" />
+
+                        <com.whattowhere.ui.customView.CustomTextView
+
+                            android:id="@+id/tvThey"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="They"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16"
+                            app:textStyle="dm_normal" />
+                    </LinearLayout>
+
+                    <com.whattowhere.ui.customView.CustomTextInputLayout
+                        android:id="@+id/tilDob"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size50"
+                        android:layout_marginTop="@dimen/size20"
+                        android:padding="@dimen/size1"
+                        app:boxBackgroundColor="@color/grey_hint"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="@dimen/size0"
+                        app:startIconDrawable="@drawable/ic_dob_icon"
+                        app:startIconTint="@color/black">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtDob"
+                            style="@style/editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/lbl_date_of_birth"
+                            app:textStyle="dm_normal" />
+                    </com.whattowhere.ui.customView.CustomTextInputLayout>
+
+
+                    <com.whattowhere.ui.customView.CustomTextView
+                        android:id="@+id/tvUpdateProfile"
+                        style="@style/button"
+                        rectDrawable="@{15f}"
+                        android:layout_marginTop="@dimen/size20"
+                        android:layout_marginBottom="@dimen/size20"
+                        android:text="@string/update_profile"
+                        app:layout_constraintStart_toStartOf="@id/guiStart"
+                        app:layout_constraintTop_toBottomOf="@id/tvIntro"
+                        app:rectColor="@{@color/black}"
+                        app:textStyle="dm_normal"
+                        tools:background="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llChangePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/size25"
+                    android:paddingTop="@dimen/size20"
+                    android:paddingEnd="@dimen/size25"
+                    android:visibility="gone">
+
+                    <com.whattowhere.ui.customView.CustomTextInputLayout
+                        android:id="@+id/tilCurrentPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size50"
+                        android:padding="@dimen/size1"
+                        app:boxBackgroundColor="@color/grey_hint"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="@dimen/size0"
+                        app:startIconTint="@color/black">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtCurrentPassword"
+                            style="@style/editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/lbl_current_password"
+                            android:inputType="textCapWords"
+                            app:textStyle="dm_normal" />
+                    </com.whattowhere.ui.customView.CustomTextInputLayout>
+
+                    <com.whattowhere.ui.customView.CustomTextInputLayout
+                        android:id="@+id/tilNewPassword"
+                        android:layout_width="match_parent"
+                        app:boxBackgroundColor="@color/grey_hint"
+                        android:layout_height="@dimen/size50"
+                        android:layout_marginTop="@dimen/size10"
+                        android:padding="@dimen/size1"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="@dimen/size0"
+                        app:startIconTint="@color/black">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtNewPassword"
+                            style="@style/editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/lbl_new_password"
+                            android:inputType="textCapWords"
+                            app:textStyle="dm_normal" />
+                    </com.whattowhere.ui.customView.CustomTextInputLayout>
+
+                    <com.whattowhere.ui.customView.CustomTextInputLayout
+                        android:id="@+id/tilConfirmPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size50"
+                        android:layout_marginTop="@dimen/size10"
+                        android:padding="@dimen/size1"
+                        app:boxBackgroundColor="@color/grey_hint"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="@dimen/size0">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtConfirmPassword"
+                            style="@style/editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/lbl_confirm_password"
+                            android:inputType="textCapWords"
+                            app:textStyle="dm_normal" />
+                    </com.whattowhere.ui.customView.CustomTextInputLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <com.whattowhere.ui.customView.CustomTextView
+                            android:id="@+id/tvChangePassowrd"
+                            style="@style/button"
+                            rectDrawable="@{15f}"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="@dimen/size10"
+                            android:layout_marginBottom="@dimen/size20"
+                            android:text="@string/lbl_update_password"
+                            app:layout_constraintStart_toStartOf="@id/guiStart"
+                            app:layout_constraintTop_toBottomOf="@id/tvIntro"
+                            app:rectColor="@{@color/black}"
+                            app:textStyle="dm_normal"
+                            tools:background="@color/black" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

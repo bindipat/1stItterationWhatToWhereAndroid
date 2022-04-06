@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home_unselected"
+        android:title="" />
+    <item
+        android:id="@+id/menu_camera"
+        android:enabled="true"
+        android:icon="@drawable/ic_post_unselected"
+        android:title="" />
+    <item
+        android:id="@+id/menu_notification"
+        android:enabled="true"
+        android:icon="@drawable/ic_menu_notification_unselected"
+        android:title="" />
+    <item
+        android:id="@+id/menu_profile"
+        android:enabled="true"
+        android:icon="@drawable/ic_menu_account_unselected"
+        android:title="" />
+</menu>

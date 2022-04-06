@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size20">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcvUser"
+            android:layout_width="@dimen/size50"
+            android:layout_height="@dimen/size50"
+            app:cardCornerRadius="@dimen/size125"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCommentUser"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/user_pic_3" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="mcvUser,tvComment" />
+
+        <com.whattowhere.ui.customView.CustomTextView
+            android:id="@+id/tvComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size15"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="@string/dummy_comments"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18sp"
+            app:layout_constraintStart_toEndOf="@id/mcvUser"
+            app:layout_constraintTop_toTopOf="@id/mcvUser"
+            app:textStyle="dm_normal" />
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/size10"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/tvComment"
+            app:layout_constraintTop_toBottomOf="@id/tvComment">
+
+            <com.whattowhere.ui.customView.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:alpha="0.56"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:text="2h"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp"
+                app:layout_constraintStart_toEndOf="@id/mcvUser"
+                app:layout_constraintTop_toTopOf="@id/mcvUser"
+                app:textStyle="dm_normal" />
+
+            <com.whattowhere.ui.customView.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size15"
+                android:alpha="0.56"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:text="Reply"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp"
+                app:layout_constraintStart_toEndOf="@id/mcvUser"
+                app:layout_constraintTop_toTopOf="@id/mcvUser"
+                app:textStyle="dm_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            app:layout_constraintTop_toBottomOf="@id/ll"
+            app:layout_constraintStart_toStartOf="@id/ll"
+            android:layout_width="wrap_content"
+            android:tag="0"
+            android:id="@+id/llSubCommentCount"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/size5"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="@dimen/size30"
+                android:layout_height="@dimen/size1"
+                android:alpha="0.5"
+                android:background="@color/grey_light"/>
+            <com.whattowhere.ui.customView.CustomTextView
+                android:id="@+id/tvSubCommentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:text="@string/view_3_more_replies"
+                android:textColor="@color/black"
+                android:alpha="0.5"
+                android:layout_marginStart="@dimen/size5"
+                android:textSize="@dimen/text_size_12sp"
+                app:layout_constraintStart_toEndOf="@id/mcvUser"
+                app:layout_constraintTop_toTopOf="@id/mcvUser"
+                app:textStyle="dm_normal" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llSubComments"
+            android:layout_width="0dp"
+            app:layout_constraintStart_toStartOf="@+id/ll"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/size5"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/size5"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/llSubCommentCount" />
+
+        <View
+            app:layout_constraintTop_toBottomOf="@id/llSubComments"
+            android:background="@color/divider_grey"
+            android:layout_marginTop="@dimen/size10"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

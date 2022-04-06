@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size20"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardElevation="@dimen/size0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/size10">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size420"
+                android:background="@color/grey_light"
+                android:scaleType="fitXY"
+                android:src="@drawable/dummy_pic_"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size10"
+                app:cardBackgroundColor="@color/transparent"
+                app:cardCornerRadius="@dimen/size125"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/user_pic_2" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.whattowhere.ui.customView.CustomTextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size20"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLength="25"
+                android:text="@string/dummy_name"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16"
+                app:layout_constraintBottom_toBottomOf="@id/mcvUser"
+                app:layout_constraintStart_toEndOf="@id/mcvUser"
+                app:layout_constraintTop_toTopOf="@id/mcvUser"
+                app:textStyle="dm_medium" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/size10"
+                android:src="@drawable/ic_more"
+                app:layout_constraintBottom_toBottomOf="@id/mcvUser"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/mcvUser" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv">
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size40"
+                    android:progress="64"
+                    android:progressDrawable="@drawable/item_progress"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/llLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/size20"
+                        android:layout_height="@dimen/size20"
+                        android:src="@drawable/ic_like_"
+                        android:tint="@color/color_primary" />
+
+                    <com.whattowhere.ui.customView.CustomTextView
+                        android:id="@+id/tvLike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/size8"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLength="25"
+                        android:text="64%"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16sp"
+                        app:layout_constraintBottom_toBottomOf="@id/mcvUser"
+                        app:layout_constraintStart_toEndOf="@id/mcvUser"
+                        app:layout_constraintTop_toTopOf="@id/mcvUser"
+                        app:textStyle="dm_medium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llDislike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/size20"
+                        android:layout_height="@dimen/size20"
+                        android:rotation="180"
+                        android:src="@drawable/ic_like_"
+                        android:tint="@color/color_primary" />
+
+                    <com.whattowhere.ui.customView.CustomTextView
+                        android:id="@+id/tvDisLike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/size8"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLength="25"
+                        android:text="34%"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16sp"
+                        app:layout_constraintBottom_toBottomOf="@id/mcvUser"
+                        app:layout_constraintStart_toEndOf="@id/mcvUser"
+                        app:layout_constraintTop_toTopOf="@id/mcvUser"
+                        app:textStyle="dm_medium" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.whattowhere.ui.customView.CustomTextView
+                android:id="@+id/tvCommentsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size10"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLength="25"
+                android:text="@string/lbl_view_all_412_comments"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16sp"
+                app:layout_constraintStart_toStartOf="@id/clProgressBar"
+                app:layout_constraintTop_toBottomOf="@id/clProgressBar"
+                app:textStyle="dm_medium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size10"
+                app:layout_constraintTop_toBottomOf="@id/tvCommentsCount">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/size125">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/size25"
+                        android:layout_height="@dimen/size25"
+                        android:src="@drawable/user_pic" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginStart="@dimen/size10"
+                    android:background="@null"
+                    android:hint="@string/lbl_write_your_comment_here"
+                    android:inputType="text"
+                    android:textColor="@color/text_dark_grey"
+                    android:textSize="@dimen/text_size_16"
+                    app:textStyle="dm_medium" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

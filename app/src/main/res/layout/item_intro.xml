@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/size350"
+            android:id="@+id/ivIntro"
+            android:layout_height="@dimen/size350"
+            android:src="@drawable/onbording_1" />
+        <com.whattowhere.ui.customView.CustomTextView
+            android:id="@+id/tvTitle"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size10"
+            android:paddingStart="@dimen/size20"
+            android:paddingTop="@dimen/size10"
+            android:paddingEnd="@dimen/size20"
+            android:paddingBottom="@dimen/size10"
+            android:text="@string/title_intro"
+            android:textSize="@dimen/text_size_24sp"
+            app:textStyle="dalime" />
+
+        <com.whattowhere.ui.customView.CustomTextView
+            android:id="@+id/tvDetails"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size10"
+            android:paddingStart="@dimen/size20"
+            android:paddingTop="@dimen/size10"
+            android:paddingEnd="@dimen/size20"
+            android:paddingBottom="@dimen/size10"
+            android:text="@string/desc_intro"
+
+            android:textSize="@dimen/text_size_16sp"
+            app:textStyle="dm_normal" />
+
+    </LinearLayout>
+</layout>

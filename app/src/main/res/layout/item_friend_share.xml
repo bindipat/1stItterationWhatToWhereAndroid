@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/size15"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvUserPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/size125"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivUser"
+                android:layout_width="@dimen/size50"
+                android:scaleType="centerCrop"
+                android:layout_height="@dimen/size50"
+                android:src="@drawable/user_pic" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.whattowhere.ui.customView.CustomTextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size20"
+            android:textSize="@dimen/text_size_16sp"
+            app:layout_constraintBottom_toBottomOf="@id/cvUserPic"
+            app:layout_constraintStart_toEndOf="@id/cvUserPic"
+            app:layout_constraintTop_toTopOf="@id/cvUserPic"
+            app:layout_constraintVertical_bias="0.1"
+            app:textStyle="dm_normal"
+            tools:text="jassica_voltr" />
+
+        <com.whattowhere.ui.customView.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size2"
+            android:textSize="@dimen/text_size_13sp"
+            android:id="@+id/tvFullName"
+            app:layout_constraintStart_toStartOf="@id/tvUserName"
+            app:layout_constraintTop_toBottomOf="@id/tvUserName"
+            app:layout_constraintVertical_bias="0.1"
+            app:textStyle="dm_normal"
+            tools:text="Jassica Volter" />
+
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="wrap_content"
+    android:id="@+id/cv"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+app:cardElevation="@dimen/size0"
+
+    android:layout_marginEnd="@dimen/size10"
+    android:layout_marginTop="@dimen/size0"
+    app:cardBackgroundColor="@color/black"
+    android:layout_height="wrap_content">
+    <com.whattowhere.ui.customView.CustomTextView
+        android:paddingStart="@dimen/size15"
+        android:paddingTop="@dimen/size5"
+        android:paddingEnd="@dimen/size15"
+        android:paddingBottom="@dimen/size5"
+        android:id="@+id/tvSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_13sp"
+
+        app:textStyle="dm_normal"
+        android:text="Send"
+
+        tools:text="Send" />
+</com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

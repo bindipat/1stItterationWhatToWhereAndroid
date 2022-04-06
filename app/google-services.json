@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1072224362091",
+    "project_id": "whattowhere-8188f",
+    "storage_bucket": "whattowhere-8188f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1072224362091:android:9394810964070220181b2e",
+        "android_client_info": {
+          "package_name": "com.whattowhere.WhatToWhereAndroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1072224362091-4o8ebvti62rkea9bhn8fmq3l6smk95rg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaSzncFrarneYIau1HwQizBFmsJfM4Z4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1072224362091-4o8ebvti62rkea9bhn8fmq3l6smk95rg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1072224362091-td4580k0ua66ilf29cfbmu2shthj4ps2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.whattowhere.WhatToWhereAndroid"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

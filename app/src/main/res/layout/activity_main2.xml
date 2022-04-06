@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/size10"
+        android:paddingEnd="@dimen/size10"
+        app:layout_collapseMode="pin">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/size40"
+            android:layout_height="@dimen/size40"
+            android:src="@drawable/ic_back_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSettings"
+            android:layout_width="@dimen/size40"
+            android:layout_height="@dimen/size40"
+            android:padding="@dimen/size5"
+            android:src="@drawable/ic_settings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="exitUntilCollapsed|scroll">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bottom_radius"
+                    android:elevation="@dimen/size2"
+                    android:paddingStart="@dimen/size10"
+                    android:paddingEnd="@dimen/size10"
+                    android:paddingBottom="@dimen/size20"
+                    app:layout_collapseMode="parallax">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+
+                        android:id="@+id/ivProfile"
+                        android:layout_width="@dimen/size95"
+                        android:layout_height="@dimen/size95"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_user_profile_placeholder"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/ShapeStyle50Percent" />
+
+                    <com.whattowhere.ui.customView.CustomTextView
+                        android:id="@+id/tvUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size10"
+                        android:text="@string/dummy_name"
+                        android:textSize="@dimen/text_size_24sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivProfile"
+                        app:textStyle="dalime" />
+
+
+                    <com.whattowhere.ui.customView.CustomTextView
+                        android:id="@+id/tvProfileDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size10"
+                        android:text="@string/lbl_profile_details"
+                        android:textSize="@dimen/text_size_13"
+                        app:layout_constraintEnd_toEndOf="@id/tvUserName"
+
+                        app:layout_constraintStart_toStartOf="@id/tvUserName"
+                        app:layout_constraintTop_toBottomOf="@id/tvUserName"
+                        app:textStyle="dm_normal" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/size10"
+                        android:src="@drawable/ic_verification"
+                        app:layout_constraintBottom_toBottomOf="@id/tvUserName"
+                        app:layout_constraintStart_toEndOf="@id/tvUserName"
+                        app:layout_constraintTop_toTopOf="@id/tvUserName" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/size20"
+                        app:layout_constraintEnd_toEndOf="@id/tvProfileDetails"
+                        app:layout_constraintStart_toStartOf="@id/tvProfileDetails"
+                        app:layout_constraintTop_toBottomOf="@id/tvProfileDetails">
+
+                        <LinearLayout
+                            android:id="@+id/llFollowers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.whattowhere.ui.customView.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="345"
+
+                                android:textSize="@dimen/text_size_13"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@id/tvUserName"
+                                app:layout_constraintStart_toStartOf="@id/tvUserName"
+                                app:layout_constraintTop_toBottomOf="@id/tvUserName"
+                                app:textStyle="dm_bold" />
+
+                            <com.whattowhere.ui.customView.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/size5"
+                                android:text="@string/lbl_followers"
+                                android:textSize="@dimen/text_size_13"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@id/tvUserName"
+                                app:layout_constraintStart_toStartOf="@id/tvUserName"
+                                app:layout_constraintTop_toBottomOf="@id/tvUserName"
+                                app:textStyle="dm_normal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llFollowing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/size40"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.whattowhere.ui.customView.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/dummy_count"
+
+                                android:textSize="@dimen/text_size_13"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@id/tvUserName"
+                                app:layout_constraintStart_toStartOf="@id/tvUserName"
+                                app:layout_constraintTop_toBottomOf="@id/tvUserName"
+                                app:textStyle="dm_bold" />
+
+                            <com.whattowhere.ui.customView.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/size5"
+                                android:text="@string/lbl_following"
+                                android:textSize="@dimen/text_size_13"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@id/tvUserName"
+                                app:layout_constraintStart_toStartOf="@id/tvUserName"
+                                app:layout_constraintTop_toBottomOf="@id/tvUserName"
+                                app:textStyle="dm_normal" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_collapseMode="pin">
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size10">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_wardrobe" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_inspiration" />
+            </com.google.android.material.tabs.TabLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size50"
+                    android:layout_marginTop="@dimen/size10"
+                    android:background="@color/color_primary" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/size10"
+        android:padding="@dimen/size5"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="@dimen/size65"
+            android:id="@+id/ivUser"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="@dimen/size65"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/user_pic"
+            app:shapeAppearanceOverlay="@style/ShapeStyle50Percent" />
+        <com.whattowhere.ui.customView.CustomTextView
+            android:id="@+id/tvNotificationMsg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/size5"
+            android:layout_marginEnd="@dimen/size5"
+            android:layout_gravity="end"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+
+            android:paddingTop="@dimen/size2"
+            android:paddingBottom="@dimen/size2"
+            android:textSize="@dimen/text_size_20sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivUser"
+            app:layout_constraintEnd_toStartOf="@id/tvFollowAndFollowing"
+            app:textStyle="dm_normal" />
+        <com.whattowhere.ui.customView.CustomTextView
+            android:id="@+id/tvFollowAndFollowing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            borderRectDrawable="@{15f}"
+            android:text="@string/lbl_following"
+            android:paddingTop="@dimen/size5"
+            android:paddingBottom="@dimen/size5"
+            android:paddingStart="@dimen/size20"
+            android:paddingEnd="@dimen/size20"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:strokeColor="@{@color/black}"
+            app:textStyle="dm_normal" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.comments.CommentsActivity">
+        <com.whattowhere.ui.customView.CustomToolbar
+            android:id="@+id/cToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isBackArrowVisible="true"
+            app:title="@string/lbl_comments"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvComments"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/size10"
+            android:orientation="vertical"
+            tools:listitem="@layout/item_comment"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/tvViewCommentsCount" />
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size10"
+            android:layout_marginEnd="@dimen/size10"
+            app:cardBackgroundColor="@color/grey"
+            android:layout_marginBottom="@dimen/size10"
+            app:cardCornerRadius="@dimen/size125"
+            android:layout_marginTop="@dimen/size10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/mcvComments"
+            app:layout_constraintVertical_bias="1">
+
+            <LinearLayout
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/size125">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/size50"
+                        android:layout_height="@dimen/size50"
+                        android:src="@drawable/user_pic" />
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/size10"
+                    android:paddingBottom="@dimen/size10"
+                    android:layout_marginStart="@dimen/size10"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/lbl_write_your_comment_here"
+                    android:inputType="text"
+                    android:textColor="@color/text_dark_grey"
+                    android:textSize="@dimen/text_size_16"
+                    app:textStyle="dm_medium" />
+
+                <com.whattowhere.ui.customView.CustomTextView
+                    android:id="@+id/tvPost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLength="25"
+                    android:layout_marginStart="@dimen/size10"
+                    android:text="@string/lbl_post"
+                    android:layout_marginEnd="@dimen/size20"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16sp"
+                    app:textStyle="dm_medium" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</layout>

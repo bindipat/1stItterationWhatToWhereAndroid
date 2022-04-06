@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="data"
+            type="com.whattowhere.ui.post.searchWardobe.SearchWardrobeModel" />
+    </data>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        app:strokeColor="@color/white"
+        app:strokeWidth="1dp"
+        android:elevation="0dp"
+        android:id="@+id/cv"
+        app:cardCornerRadius="@dimen/size5"
+        android:layout_marginBottom="@dimen/size20"
+
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingTop="@dimen/size10"
+            android:paddingBottom="@dimen/size10"
+            android:paddingStart="@dimen/size20"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:src="@{data.drawable}"
+                android:id="@+id/ivSelected"
+                android:layout_height="wrap_content"/>
+            <com.whattowhere.ui.customView.CustomTextView
+                android:layout_width="wrap_content"
+                app:textStyle="dm_normal"
+                android:layout_marginStart="@dimen/size20"
+                android:text="@{data.title}"
+                android:id="@+id/tvWardrobe"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

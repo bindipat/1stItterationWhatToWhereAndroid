@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.whattowhere.ui.intro.IntroViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/size10"
+        tools:context=".ui.intro.IntroActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/size40"
+            android:layout_height="@dimen/size40"
+            android:src="@drawable/logo" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="wrap_content"
+            android:id="@+id/vpIntro"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size10"
+            android:layout_weight="1" />
+
+        <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+            android:id="@+id/dotsIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size20"
+            android:layout_marginBottom="@dimen/size20"
+            app:dampingRatio="0.5"
+            app:dotsColor="@color/blue"
+            app:dotsCornerRadius="25dp"
+            app:dotsSize="16dp"
+            app:dotsSpacing="6dp"
+            app:dotsStrokeColor="@color/grey_light"
+            app:dotsStrokeWidth="2dp"
+            app:stiffness="300" />
+
+        <com.whattowhere.ui.customView.CustomTextView
+            android:id="@+id/tvSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size20"
+            android:gravity="center"
+            android:paddingStart="@dimen/size20"
+            android:paddingTop="@dimen/size10"
+            android:paddingEnd="@dimen/size20"
+            android:paddingBottom="@dimen/size10"
+            android:text="@string/lbl_skip"
+            android:textAllCaps="true"
+            android:textSize="@dimen/text_size_16sp"
+            app:textStyle="dm_normal" />
+    </LinearLayout>
+</layout>

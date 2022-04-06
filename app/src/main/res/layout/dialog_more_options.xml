@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:background="@color/transparent"
+      android:padding="@dimen/size20"
+      android:layout_height="wrap_content">
+      <com.google.android.material.card.MaterialCardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="@dimen/size10"
+          app:cardCornerRadius="@dimen/size20"
+          app:cardElevation="@dimen/size5">
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginStart="@dimen/size10"
+              android:layout_marginTop="@dimen/size10"
+              android:layout_marginEnd="@dimen/size10"
+              android:layout_marginBottom="@dimen/size10"
+              android:orientation="vertical">
+
+              <com.whattowhere.ui.customView.CustomTextView
+                  android:id="@+id/tvReport"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="@dimen/size15"
+                  android:ellipsize="end"
+                  android:gravity="center"
+                  android:paddingTop="@dimen/size10"
+                  android:paddingBottom="@dimen/size10"
+                  android:text="@string/lbl_report"
+
+                  android:textSize="@dimen/text_size_18sp"
+                  app:layout_constraintStart_toEndOf="@id/mcvUser"
+                  app:layout_constraintTop_toTopOf="@id/mcvUser"
+                  app:textStyle="dm_normal" />
+              <com.whattowhere.ui.customView.CustomTextView
+                  android:id="@+id/tvUnfollow"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="@dimen/size15"
+                  android:ellipsize="end"
+                  android:gravity="center"
+                  android:paddingTop="@dimen/size10"
+                  android:paddingBottom="@dimen/size10"
+                  android:text="@string/lbl_unfollow"
+                  android:textSize="@dimen/text_size_18sp"
+                  app:layout_constraintStart_toEndOf="@id/mcvUser"
+                  app:layout_constraintTop_toTopOf="@id/mcvUser"
+                  app:textStyle="dm_normal" />
+              <com.whattowhere.ui.customView.CustomTextView
+                  android:id="@+id/tvBlockUser"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="@dimen/size15"
+                  android:ellipsize="end"
+                  android:gravity="center"
+                  android:paddingTop="@dimen/size10"
+                  android:paddingBottom="@dimen/size10"
+                  android:text="@string/lbl_block_user"
+                  android:textSize="@dimen/text_size_18sp"
+                  app:layout_constraintStart_toEndOf="@id/mcvUser"
+                  app:layout_constraintTop_toTopOf="@id/mcvUser"
+                  app:textStyle="dm_normal" />
+
+              <com.whattowhere.ui.customView.CustomTextView
+                  android:id="@+id/tvShare"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="@dimen/size15"
+                  android:ellipsize="end"
+                  android:gravity="center"
+                  android:paddingTop="@dimen/size10"
+                  android:paddingBottom="@dimen/size10"
+                  android:text="@string/lbl_share"
+                  android:textSize="@dimen/text_size_18sp"
+                  app:layout_constraintStart_toEndOf="@id/mcvUser"
+                  app:layout_constraintTop_toTopOf="@id/mcvUser"
+                  app:textStyle="dm_normal" />
+
+          </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+  </FrameLayout>
+</layout>

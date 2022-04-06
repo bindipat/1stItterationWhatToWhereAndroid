@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.whattowhere.ui.profile.setupProfile.SetUpProfileViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/size25"
+        android:paddingEnd="@dimen/size25"
+        tools:context=".ui.profile.setupProfile.SetUpProfileActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size60"
+            android:src="@drawable/setup_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whattowhere.ui.customView.CustomTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/size50"
+            android:gravity="center"
+            android:paddingTop="@dimen/size10"
+            android:paddingBottom="@dimen/size10"
+            android:text="@string/lbl_let_s_set_up_your_profile_first"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv"
+            app:textStyle="dalime" />
+
+        <com.whattowhere.ui.customView.CustomTextView
+            android:id="@+id/tvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size20"
+            android:gravity="center"
+            android:text="@string/desc_intro"
+            android:textSize="@dimen/text_size_16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:textStyle="dm_normal" />
+
+        <com.whattowhere.ui.customView.CustomTextView
+            android:id="@+id/tvEditProfile"
+            rectDrawable="@{15f}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size30"
+            android:background="@color/black"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/size10"
+            android:paddingBottom="@dimen/size10"
+            android:text="@string/lbl_edit_profile"
+
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_20sp"
+            app:layout_constraintTop_toBottomOf="@id/tvDescription"
+            app:rectColor="@{@color/black}"
+            app:textStyle="dm_normal" />
+
+        <com.whattowhere.ui.customView.CustomTextView
+            android:id="@+id/tvSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size20"
+            android:gravity="center"
+            android:paddingStart="@dimen/size20"
+            android:paddingTop="@dimen/size10"
+            android:paddingEnd="@dimen/size20"
+            android:paddingBottom="@dimen/size20"
+            android:text="@string/lbl_skip"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEditProfile"
+            app:textStyle="dm_normal" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

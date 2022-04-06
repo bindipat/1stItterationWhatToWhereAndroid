@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.whattowhere.ui.post.searchWardobe.SearchWardrobeViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/size20"
+            android:paddingTop="@dimen/size40"
+            android:paddingEnd="@dimen/size20"
+            android:paddingBottom="@dimen/size20">
+
+            <com.whattowhere.ui.customView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/lbl_want_to_add_this_photo_n_into_wardrobe"
+                android:textSize="@dimen/text_size_18sp"
+                app:textStyle="dm_normal" />
+
+            <com.whattowhere.ui.customView.CustomTextInputLayout
+                android:id="@+id/tilUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size20"
+                android:padding="@dimen/size1"
+                app:boxBackgroundColor="@color/grey_hint"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="@dimen/size0"
+                app:startIconTint="@color/hint_grey"
+                app:startIconDrawable="@drawable/ic_search_bar_icon">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtUserName"
+                    style="@style/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/search_wardrobe_name"
+                    android:inputType="textCapWords"
+                    app:textStyle="dm_normal" />
+            </com.whattowhere.ui.customView.CustomTextInputLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:layout_constraintHeight_default="wrap"
+                app:layout_constraintHeight_max="@dimen/size100">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/rvWardrobe"
+                    android:layout_marginTop="@dimen/size20"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:minHeight="1000dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/item_wardrobe" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.whattowhere.ui.customView.CustomTextView
+                android:id="@+id/tvSkipAndPublish"
+                style="@style/button"
+                rectDrawable="@{15f}"
+                android:layout_marginTop="@dimen/size10"
+                android:text="@string/lbl_skip_and_publish"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll"
+                app:rectColor="@{@color/black}"
+                app:textStyle="dm_normal"
+                tools:background="@color/black" />
+
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

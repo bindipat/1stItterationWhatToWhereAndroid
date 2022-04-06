@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.whattowhere.ui.settings.SettingsViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.settings.SettingsActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <com.whattowhere.ui.customView.CustomToolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:isBackArrowVisible="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:title="@string/lbl_settings" />
+
+            <com.whattowhere.ui.customView.CustomTextView
+                android:id="@+id/tvLogOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/size20"
+                android:gravity="center"
+                android:text="@string/lbl_logout"
+                android:textColor="@color/text_red"
+                android:textSize="@dimen/text_size_14"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:textStyle="dm_medium" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                >
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvEditProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size15"
+                    android:layout_marginTop="@dimen/size10"
+                    android:layout_marginEnd="@dimen/size15"
+                    app:cardCornerRadius="@dimen/size7"
+                    app:cardElevation="@dimen/size1">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/size20">
+
+                        <com.whattowhere.ui.customView.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/size20"
+                            android:gravity="center"
+                            android:text="@string/lbl_edit_profile"
+                            android:textSize="@dimen/text_size_18sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:textStyle="dm_medium" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/size5"
+                            android:src="@drawable/ic_next"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvStyleQuiz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size15"
+                    android:layout_marginTop="@dimen/size10"
+                    android:layout_marginEnd="@dimen/size15"
+                    app:cardCornerRadius="@dimen/size7"
+                    app:cardElevation="@dimen/size1">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/size20">
+
+                        <com.whattowhere.ui.customView.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/size20"
+                            android:gravity="center"
+                            android:text="@string/lbl_style_quiz"
+                            android:textSize="@dimen/text_size_18sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:textStyle="dm_medium" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/size5"
+
+                            android:src="@drawable/ic_next"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvSecurity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size15"
+                    android:layout_marginTop="@dimen/size10"
+                    android:layout_marginEnd="@dimen/size15"
+                    app:cardCornerRadius="@dimen/size7"
+                    app:cardElevation="@dimen/size1">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/size20">
+
+                        <com.whattowhere.ui.customView.CustomTextView
+                            android:id="@+id/tvLblSecurity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/size20"
+                            android:gravity="center"
+                            android:text="@string/lbl_security"
+                            android:textSize="@dimen/text_size_18sp"
+
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:textStyle="dm_medium" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivSecurity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/size5"
+                            android:src="@drawable/ic_next"
+                            android:tag="0"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/llSecuritySubMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size10"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/size10"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toBottomOf="@id/tvLblSecurity"
+                            tools:visibility="visible">
+
+                            <include
+                                android:id="@+id/incBlockAccount"
+                                layout="@layout/view_account"
+                                app:isViewIsVisible="@{true}"
+                                app:title="@{@string/lbl_block_account}" />
+
+
+                            <include
+                                android:id="@+id/incPrivacySettings"
+                                layout="@layout/view_account"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:isViewIsVisible="@{false}"
+                                app:title="@{@string/lbl_privacy_settings}" />
+
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size15"
+                    android:layout_marginTop="@dimen/size10"
+                    android:layout_marginEnd="@dimen/size15"
+                    app:cardCornerRadius="@dimen/size7"
+                    app:cardElevation="@dimen/size1"
+
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/size20">
+
+                        <com.whattowhere.ui.customView.CustomTextView
+                            android:id="@+id/tvLblHelp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/size20"
+                            android:gravity="center"
+                            android:text="@string/lbl_help"
+                            android:textSize="@dimen/text_size_18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:textStyle="dm_medium" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivHelp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/size5"
+                            android:src="@drawable/ic_next"
+                            android:tag="0"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/llHelpSubMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size10"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/size10"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toBottomOf="@id/tvLblHelp"
+                            tools:visibility="visible">
+
+                            <include
+                                android:id="@+id/incFaq"
+                                layout="@layout/view_account"
+                                app:isViewIsVisible="@{true}"
+                                app:title="@{@string/lbl_faq}" />
+
+
+                            <include
+                                android:id="@+id/incReportAnIssue"
+                                layout="@layout/view_account"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:isViewIsVisible="@{true}"
+                                app:title="@{@string/lbl_report_an_issue}" />
+
+                            <include
+                                android:id="@+id/incTourGuide"
+                                layout="@layout/view_account"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/tour_guide"
+                                app:isViewIsVisible="@{false}"
+                                app:title="@{@string/tour_guide}" />
+
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvContactUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size15"
+                    android:layout_marginTop="@dimen/size10"
+                    android:layout_marginEnd="@dimen/size15"
+                    app:cardCornerRadius="@dimen/size7"
+                    app:cardElevation="@dimen/size1">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/size20">
+
+                        <com.whattowhere.ui.customView.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/size20"
+                            android:gravity="center"
+                            android:text="@string/contact_us"
+                            android:textSize="@dimen/text_size_18sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:textStyle="dm_medium" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/size5"
+                            android:src="@drawable/ic_next"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvAboutUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size15"
+                    android:layout_marginTop="@dimen/size10"
+                    android:layout_marginEnd="@dimen/size15"
+                    app:cardCornerRadius="@dimen/size7"
+                    app:cardElevation="@dimen/size1">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/size20">
+
+                        <com.whattowhere.ui.customView.CustomTextView
+                            android:id="@+id/tvLblAboutUs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/size20"
+                            android:gravity="center"
+                            android:text="@string/lbl_about_us"
+                            android:textSize="@dimen/text_size_18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:textStyle="dm_medium" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivAboutUs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/size5"
+                            android:src="@drawable/ic_next"
+                            android:tag="0"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/llAboutUs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size10"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/size10"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toBottomOf="@id/tvLblAboutUs"
+                            tools:visibility="visible">
+
+                            <include
+                                android:id="@+id/incAboutWhatToWhere"
+                                layout="@layout/view_account"
+                                app:isViewIsVisible="@{true}"
+                                app:title="@{@string/lbl_about_what_to_where}" />
+
+
+                            <include
+                                android:id="@+id/incTermsAndCondition"
+                                layout="@layout/view_account"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:isViewIsVisible="@{true}"
+                                app:title="@{@string/lbl_terms_conditions}" />
+
+                            <include
+                                android:id="@+id/incPrivacyPolicy"
+                                layout="@layout/view_account"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:isViewIsVisible="@{false}"
+                                app:title="@{@string/lbl_privacy_policy}" />
+
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvShareYourFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size15"
+                    android:layout_marginTop="@dimen/size10"
+                    android:layout_marginEnd="@dimen/size15"
+                    app:cardCornerRadius="@dimen/size7"
+                    app:cardElevation="@dimen/size1">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/size20">
+
+                        <com.whattowhere.ui.customView.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/size20"
+                            android:gravity="center"
+                            android:text="@string/lbl_share_your_feedback"
+                            android:textSize="@dimen/text_size_18sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:textStyle="dm_medium" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/size5"
+                            android:src="@drawable/ic_next"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvInviteFriend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size15"
+                    android:layout_marginTop="@dimen/size10"
+                    android:layout_marginEnd="@dimen/size15"
+                    android:layout_marginBottom="@dimen/size20"
+                    app:cardCornerRadius="@dimen/size7"
+                    app:cardElevation="@dimen/size1">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/size20">
+
+                        <com.whattowhere.ui.customView.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/size20"
+                            android:gravity="center"
+                            android:text="@string/lbl_invite_a_friend"
+                            android:textSize="@dimen/text_size_18sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:textStyle="dm_medium" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/size5"
+                            android:src="@drawable/ic_next"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

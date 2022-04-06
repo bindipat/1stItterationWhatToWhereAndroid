@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MVTextView">
+        <attr name="textStyle">
+            <flag name="dm_normal" value="0" />
+            <flag name="dm_bold" value="1" />
+            <flag name="dm_medium" value="2" />
+            <flag name="dalime" value="3"/>
+            <flag name="ooch_baby_regular" value="4" />
+        </attr>
+        <attr name="textInputStyleCustom" format="boolean"></attr>
+    </declare-styleable>
+    <declare-styleable name="MVShimmer">
+        <attr name="shimmerStyle" format="integer">
+            <flag name="bid_shimmer" value="0" />
+            <flag name="accept_reject" value="1" />
+        </attr>
+        <attr name="shimmerCount" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="MVToolBar">
+        <attr name="title" format="string" />
+        <attr name="isTitleVisible" format="boolean" />
+        <attr name="menu1" format="reference" />
+        <attr name="menu2" format="reference" />
+        <attr name="ivBackImg" format="reference" />
+        <attr name="isBackArrowVisible" format="boolean"/>
+        <attr name="isViewIsVisible" format="boolean"  />
+    </declare-styleable>
+
+    <declare-styleable name="ButtonProgress">
+
+        <attr name="bgColor" format="reference" />
+        <attr name="radius" format="string"/>
+        <attr name="buttonTextColor" format="reference" />
+        <attr name="textSize" format="integer" />
+        <attr name="padding" format="integer" />
+        <attr name="textAllCaps" format="boolean" />
+        <attr name="text" format="string" />
+
+
+    </declare-styleable>
+</resources>

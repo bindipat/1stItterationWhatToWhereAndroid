@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.whattowhere.ui.splashSelection.SplashSelectionViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/size20"
+            android:paddingTop="@dimen/size20"
+            android:paddingEnd="@dimen/size20"
+            android:paddingBottom="@dimen/size20"
+            tools:context=".ui.splashSelection.SplashSelection">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/fl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/overview_1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/border_shadow"
+                    app:layout_constraintBottom_toBottomOf="@id/iv"
+                    app:layout_constraintEnd_toEndOf="@id/iv"
+                    app:layout_constraintStart_toStartOf="@id/iv"
+                    app:layout_constraintTop_toTopOf="@id/iv" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guiStart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03"
+                app:layout_constraintStart_toStartOf="@id/fl" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guiEnd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.97"
+                app:layout_constraintStart_toStartOf="@id/fl" />
+
+            <include
+                android:id="@+id/incLogo"
+                layout="@layout/layout_circle_logo"
+                android:layout_width="@dimen/size115"
+                android:layout_height="@dimen/size115"
+                app:layout_constraintBottom_toBottomOf="@id/fl"
+                app:layout_constraintStart_toStartOf="@id/guiStart"
+                app:layout_constraintTop_toTopOf="@id/fl"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <com.whattowhere.ui.customView.CustomTextView
+                android:id="@+id/tvIntro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_confidence_is_the_best_dressed"
+                android:textSize="48sp"
+                android:includeFontPadding="false"
+                android:layout_marginTop="@dimen/size10"
+                app:layout_constraintEnd_toEndOf="@id/fl"
+                app:layout_constraintStart_toStartOf="@id/guiStart"
+                app:layout_constraintTop_toBottomOf="@id/incLogo" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.8" />
+
+            <com.whattowhere.ui.customView.CustomTextView
+                android:id="@+id/tvSignUp"
+                rectDrawable="@{15f}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size10"
+                android:background="@color/black"
+                android:paddingStart="@dimen/size20"
+                android:paddingTop="@dimen/size10"
+                android:paddingEnd="@dimen/size20"
+                android:paddingBottom="@dimen/size10"
+                android:text="@string/lbl_sign_up"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20sp"
+                app:textStyle="dm_normal"
+                app:layout_constraintStart_toStartOf="@id/guiStart"
+                app:layout_constraintTop_toBottomOf="@id/tvIntro"
+                app:rectColor="@{@color/black}" />
+
+            <LinearLayout
+                borderRectDrawable="@{25f}"
+                strokeColor="@{@color/black}"
+                strokeWidth="@{3}"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/size15"
+                android:gravity="center"
+                android:minWidth="@dimen/size150"
+                android:orientation="horizontal"
+                android:padding="@dimen/size5"
+                android:paddingStart="@dimen/size10"
+                android:paddingEnd="@dimen/size10"
+                app:layout_constraintBottom_toBottomOf="@id/tvSignUp"
+                app:layout_constraintStart_toEndOf="@id/tvSignUp"
+                app:layout_constraintEnd_toEndOf="@id/guiEnd"
+                app:layout_constraintTop_toTopOf="@id/tvSignUp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivGoogle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_google" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivFb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size25"
+                    android:src="@drawable/ic_fb" />
+            </LinearLayout>
+
+            <com.whattowhere.ui.customView.CustomTextView
+                android:id="@+id/tvAlreadyMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size10"
+                android:paddingTop="@dimen/size10"
+                android:paddingEnd="@dimen/size20"
+                android:paddingBottom="@dimen/size10"
+                android:text="@string/lbl_already_a_member"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20sp"
+                app:textStyle="dm_normal"
+                app:layout_constraintStart_toStartOf="@id/guiStart"
+                app:layout_constraintTop_toBottomOf="@id/tvSignUp"
+         />
+
+            <com.whattowhere.ui.customView.CustomTextView
+                rectColor="@{@color/grey}"
+                rectDrawable="@{55f}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="@dimen/size10"
+                android:id="@+id/tvSignIn"
+                android:background="@color/grey"
+                android:layout_marginTop="@dimen/size10"
+                android:paddingBottom="@dimen/size10"
+                android:text="@string/lbl_sign_in"
+                app:textStyle="dm_normal"
+                android:textSize="@dimen/size16"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/guiEnd"
+                app:layout_constraintStart_toStartOf="@id/guiStart"
+                app:layout_constraintTop_toBottomOf="@id/tvAlreadyMember" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

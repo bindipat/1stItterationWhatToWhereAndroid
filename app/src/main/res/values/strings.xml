@@ -1,0 +1,142 @@
+<resources>
+    <string name="app_name">What To Where</string>
+    <string name="facebook_app_id">967852787112295</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">2fd9c409c0a70388ef3753646b0252f3</string>
+
+    <string name="ok">Okay</string>
+    <string name="network_connection_error">Internet connection lost, please retry again</string>
+    <!--    <string name="lbl_confidence_is_the_best_dressed" translatable="false"><font color="#000000" face="dalime">Confidence\nis the </font> <font color="#EA9F5A" size="59">best </font><font color="#000000">dressed! </font></string>-->
+    <string name="lbl_confidence_is_the_best_dressed" translatable="false">Confidence\nis the best dressed!</string>
+    <string name="lbl_sign_up">Sign Up</string>
+    <string name="lbl_already_a_member">Already a member?</string>
+    <string name="lbl_sign_in">Sign In</string>
+    <string name="title_intro"><![CDATA[Look awesome in every\nOccasion & Festival!]]></string>
+    <string name="desc_intro">Maecenas dapibus sagittis volutpat. Aliquam vestibulum nisl id massa dictum\nporta.</string>
+    <string name="lbl_skip"><u><b>Skip</b></u></string>
+    <string name="enter_email_address">Enter Email Address</string>
+    <string name="lbl_forgot_password">Forgot Password?</string>
+    <string name="lbl_verification_code">Verification Code</string>
+    <string name="dummy_name">Jessica Volter</string>
+    <string name="don_t_have_account_sign_up">Don\'t Have account?<u> <b>Sign Up</b></u></string>
+    <string name="lbl_full_name">Full Name</string>
+    <string name="lbl_enter_password">Enter Password</string>
+    <string name="lbl_confirm_pwd">Enter Confirm Password</string>
+    <string name="lbl_terms_and_condition">By clicking on Sign Up button you are agree with What To Where <u>Terms and Conditions</u> and <u>Privacy Policy.</u></string>
+    <string name="lbl_terms_forgotpwd_desc"> Don\'t worry! It happens.\n
+Please enter the address associated
+with your account.</string>
+    <string name="lbl_already_a_member_signin">Already a Member?<u><b>Sign In</b></u></string>
+    <string name="lbl_submit">Submit</string>
+    <string name="lbl_verify">Verify</string>
+    <string name="resend"><u>Resend</u></string>
+    <string name="lbl_let_s_set_up_your_profile_first">Let\'s set up\nYour profile first</string>
+    <string name="lbl_edit_profile">Edit Profile</string>
+    <string name="lbl_error">Error</string>
+    <string name="please_enter_email_address">Please enter email address</string>
+    <string name="please_enter_valid_email_address">Please enter valid email address</string>
+    <string name="please_enter_password">Please enter password</string>
+    <string name="lbl_it_s_time_to_n_take_style_quiz">It\'s Time to \n Take Style Quiz</string>
+    <string name="lbl_start">Start</string>
+    <string name="lbl_change_profile_picture">Change Profile Picture</string>
+    <string name="lbl_profile_info">Profile Info</string>
+    <string name="lbl_change_password">Change Password</string>
+    <string name="lbl_description_bio">Description/Bio*</string>
+    <string name="lbl_enter_phone_number">Enter Phone Number*</string>
+    <string name="lbl_enter_user_name">Enter User Name</string>
+    <string name="lbl_select_gender">Select geneder</string>
+    <string name="lbl_choose_your_pronouns">Choose your pronouns</string>
+    <string name="lbl_she">SHE</string>
+    <string name="lbl_he">He</string>
+    <string name="lbl_date_of_birth">Date of birth*</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="lbl_current_password">Current Password</string>
+    <string name="lbl_new_password">New Password</string>
+    <string name="lbl_confirm_password">Confirm Password</string>
+    <string name="lbl_update_password">Update Password</string>
+    <string name="lbl_how_to_click">How to click</string>
+    <string name="lbl_got_it">Got It</string>
+    <string name="lbl_enter_caption">Enter Caption</string>
+    <string name="lbl_inspiration">Inspiration</string>
+    <string name="lbl_review">Review</string>
+    <string name="lbl_private">private</string>
+    <string name="lbl_publish">Publish</string>
+    <string name="lbl_want_to_add_this_photo_n_into_wardrobe">Want to add this photo \n into wardrobe?</string>
+    <string name="search_wardrobe_name">Search Wardrobe Name</string>
+    <string name="done">Done</string>
+    <string name="lbl_skip_and_publish">Skip and Publish</string>
+    <string name="lbl_sent">Sent</string>
+    <string name="please_enter_full_name">Please enter full name</string>
+    <string name="please_enter_confirm_password">Please enter confirm password</string>
+    <string name="password_and_confirm_password_not_same">Password and confirm password not match</string>
+    <string name="camera_permissions_needed">Please provide camera and storage permission</string>
+    <string name="location_permissions_needed">Please provide location permission</string>
+    <string name="open_setting">Open Settings</string>
+    <string name="this_field_is_requried">This field is require</string>
+    <string name="must_be_valid_email_address">Must be a valid email address</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="lbl_please_set_new_password">Please set new password</string>
+    <string name="lbl_password">Password</string>
+    <string name="lbl_reset_password">Reset Password</string>
+    <string name="lbl_must_be_6_char">Must be atleast 6 characters</string>
+    <string name="lbl_wrong_enter_otp">wrong enter otp</string>
+    <array name="genders">
+        <item>Select Genders</item>
+        <item>Male</item>
+        <item>Female</item>
+    </array>
+    <array name="wardrobe">
+        <item>abc</item>
+        <item>Vintage fashion style.</item>
+        <item>Artsy fashion style.</item>
+        <item>Casual fashion style.</item>
+        <item>Grunge style clothing.</item>
+        <item>Chic fashion style.</item>
+        <item>Bohemian fashion style.</item>
+        <item>Sexy fashion Style.</item>
+        <item>Exotic fashion style.</item>
+    </array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lbl_logout">Logout</string>
+    <string name="lbl_style_quiz">Style QUiz</string>
+    <string name="lbl_security">Security</string>
+    <string name="lbl_block_account">Block Account</string>
+    <string name="lbl_help">Help</string>
+    <string name="lbl_faq">FAQ</string>
+    <string name="lbl_report_an_issue">Report an issue</string>
+    <string name="tour_guide">Tour Guide</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="lbl_about_what_to_where">what To Where</string>
+    <string name="lbl_terms_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="lbl_about_us">About Us</string>
+    <string name="lbl_privacy_policy">Privacy Policy</string>
+    <string name="lbl_share_your_feedback">Share Your Feedback</string>
+    <string name="lbl_invite_a_friend">Invite a Friend</string>
+    <string name="lbl_privacy_settings">Privacy Settings</string>
+    <string name="lbl_settings">Settings</string>
+    <string name="lbl_home">Home</string>
+    <string name="lbl_reviews">Reviews</string>
+    <string name="lbl_view_all_412_comments">View All 412 Comments</string>
+    <string name="lbl_write_your_comment_here">Write your comment here</string>
+    <string name="lbl_search">Search</string>
+    <string name="dummy_comments"><b>Valeria Street</b>   <font color="#70000000">All black! loved it.</font></string>
+    <string name="view_3_more_replies">View 3 More Replies</string>
+    <string name="lbl_hide_replies">Hide Replies</string>
+    <string name="dynemic_view_more_replies">View %1$s More Replies</string>
+    <string name="lbl_unfollow">Unfollow</string>
+    <string name="lbl_report">Report</string>
+    <string name="lbl_block_user">Block User</string>
+    <string name="lbl_share">Share</string>
+    <string name="lbl_profile_details">People will stare make it worth their while</string>
+    <string name="lbl_following"> Following</string>
+    <string name="dummy_count">3045</string>
+    <string name="lbl_followers"> Followers</string>
+    <string name="lbl_wardrobe">Wardrobe</string>
+    <string name="lbl_comments">Comments</string>
+    <string name="lbl_post">post</string>
+    <string name="lbl_no">No</string>
+    <string name="lbl_yesterday">Yesterday</string>
+    <string name="lbl_notifications">Notifications</string>
+    <string name="lbl_beach_day">Beach Day</string>
+</resources>
